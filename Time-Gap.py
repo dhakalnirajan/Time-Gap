@@ -29,6 +29,8 @@ diff= t1-t2
 
 year= int(diff//(365*24*60*60))
 diff= diff%(365*24*60*60)
+week= int(diff//(7*24*60*60))
+diff= diff%(7*24*60*60)
 day= int(diff//(24*60*60))
 diff= diff%(24*60*60)
 hour= int(diff//(60*60))
@@ -38,5 +40,5 @@ diff= diff%60
 sec= int(diff)
 
 print(f'\"{name_of_event} is on {day_of_event}/{month_of_event}/{year_of_event}'
-      f'({year} years, {day} days, {hour} hours,'
+      f'({year} years,{week} weeks, {day} days, {hour} hours,'
       f' {mins} minutes and {sec} seconds later).\"')
